@@ -1,0 +1,55 @@
+*{
+	box-sizing: border-box;
+	font-family: 'Catamaran', sans-serif;
+}
+
+body {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.header {
+	height: 10rem;
+	background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/03/52/18/3857934c5941db9.jpg");
+}
+
+.headerText{
+	margin-top: 1rem;
+	background-color: rgba(255,255,255,0.7);
+}
+
+.navbar{
+	text-align: center;
+}
+
+.buttons{
+	display: flex;
+	justify-content: space-around;
+	height: 3rem;
+}
+
+.firstButton{
+	width: 100%;
+	clip-path: polygon(95% 0, 0 0, 0 100%, 95% 100%, 100% 50%);
+	background-color: green;
+}
+
+.middleButton{
+	width: 100%;
+	clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%, 5% 50%);
+	background-color: brown;
+}
+
+.lastButton{
+	width: 100%;
+	clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 5% 50%);
+	background-color: blue;
+}
+
+.hamburgerButton{
+	display: none;
+}
+
+@media only screen and (max-width: 768px) {
+	
+}
