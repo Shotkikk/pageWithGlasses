@@ -50,6 +50,42 @@ body {
 	display: none;
 }
 
-@media only screen and (max-width: 768px) {
-	
+.slider{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.face{
+	text-align: center;
+}
+
+.checkboxContainer{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 1rem 0;
+	background-color: darkgrey;
+}
+
+.btnContainer{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px){
+
+}
+
+@media only screen and (max-width: 480px) {
+	.slider{
+		flex-direction: column;
+	}
 }
