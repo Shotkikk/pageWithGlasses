@@ -1,19 +1,33 @@
 var btnWeiter = document.querySelector('.btnWeiter');
+var btnZuruck = document.querySelector('.btnZuruckContainer');
 
-btnWeiter.addEventListener('click', function(){
-    console.log('guzik działa')
+btnWeiter.addEventListener('click', function(e){
 
+    var glassesGallery = document.querySelector('.glasses');
+    var slider = e.target.parentElement.previousElementSibling;
+
+
+    console.log(glassesGallery)
+
+    e.target.parentElement.style = 'display: none';
+    slider.style = 'display: none';
+    glassesGallery.style = 'display: flex; justify-content: space-around';
+    btnZuruck.style = 'display: flex';
+
+})
+
+btnZuruck.addEventListener('click', function () {
+	slider.style = 'display: flex';
 })
 
 
 
 function addProducts(howManyProducts, howManyLi){
     var productsContainer = document.querySelector('.products');
-    var liArray = [];
     var productsDetail = [
         'Braillentyp: Damen, Herren', 'Rahmentyp: Randlose Brille', 'Eckiger Rahmen', 'Ovaler Rahmen', "Runder Rahmen", 'Still: casual, extravagant', 'Einstarkenbrille','Material: Metal'
     ];
-    var prices = ['ab 39,90 E', 'ab 149,90 E']
+    var prices = ['ab 39,90€', 'ab 149,90€']
 
     for(var i = 0; i < howManyProducts; i++){
 
@@ -29,6 +43,10 @@ function addProducts(howManyProducts, howManyLi){
         var priceExtras = document.createElement('span');
         var price = document.createElement('h6');
         var btnBuy = document.createElement('button');
+        var btnDescription = document.createElement('span');
+        var btnShoppingCartIcon = document.createElement('i');
+        var btnArrowRightIcon = document.createElement('i');
+
 
 
 
@@ -38,37 +56,33 @@ function addProducts(howManyProducts, howManyLi){
         newImg.src = './assets/glasses.jpg';
 
         singleProductContainer.classList = 'singleProduct';
-
         priceContainer.classList = 'priceContainer';
         priceDetailContainer.classList = 'priceDetail';
 
         priceExtras.classList= 'priceExtras';
-        price.classList = 'price';
-        btnBuy.classList = 'btnBuy';
-        btnBuy.innerHTML = 'Zum Produkt';
-        priceExtras.innerHTML = 'Rahnem inkl.Glasser & Service';
-        price.innerHTML = prices[i];
+		priceExtras.innerHTML = 'Rahnem inkl.Glasser & Service';
+		price.classList = 'price';
+		price.innerHTML = prices[i];
 
-
-
-        // switch (i) {
-        //     case i == 0:
-        //
-        //         break;
-        //     case i == 1:
-        //         price.innerHTML = '149,90E';
-        //         break;
-        // }
+		btnBuy.classList = 'btnBuy';
+		btnDescription.classList = 'btnDescription';
+		btnDescription.innerHTML = 'Zum Produkt';
+		btnShoppingCartIcon.classList = 'fas fa-shopping-cart btnShoppingCartIcon';
+        btnArrowRightIcon.classList = 'fas fa-arrow-alt-circle-right btnBuyArrowRight';
 
 
         for(var j = 0; j <= howManyLi - 1 ; j++){
+			var checkContainer = document.createElement('span');
             var newLi = document.createElement('li');
             var check = document.createElement('i');
-            check.classList = 'fa fa-check check';
 
+            checkContainer.classList = 'fa-li';
+            check.classList = 'fas fa-check check';
 
-            newLi.innerHTML = productsDetail[j];
-            newLi.appendChild(check);
+            checkContainer.appendChild(check);
+
+			newLi.innerHTML = productsDetail[j];
+			newLi.appendChild(check);
 
 
             newUl.appendChild(newLi);
@@ -77,12 +91,17 @@ function addProducts(howManyProducts, howManyLi){
         priceDetailContainer.appendChild(priceExtras)
         priceDetailContainer.appendChild(price);
 
+        btnBuy.appendChild(btnShoppingCartIcon);
+        btnBuy.appendChild(btnDescription);
+        btnBuy.appendChild(btnArrowRightIcon);
+
         priceContainer.appendChild(priceDetailContainer);
         priceContainer.appendChild(btnBuy);
 
         specificationListContainer.appendChild(newHeader);
         specificationListContainer.appendChild(listHeader);
         specificationListContainer.appendChild(newUl);
+
         singleProductContainer.appendChild(newImg);
         singleProductContainer.appendChild(specificationListContainer);
         singleProductContainer.appendChild(priceContainer);

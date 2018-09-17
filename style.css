@@ -63,7 +63,7 @@ body {
 
 /*Slider section style*/
 
-.slider{
+.facesSlider{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -81,6 +81,10 @@ body {
 	background-color: #EDEDED;
 }
 
+.checkbox input:checked {
+	color: #6600a1;
+}
+
 input[type=checkbox] {
 	background-color: white;
 	color: #6600a1;
@@ -96,14 +100,21 @@ input[type=checkbox] {
 	margin-top: 2rem;
 }
 
-.btnWeiter{
+.btnZuruckContainer{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-top: 2rem;
+}
+
+.btnStyle {
 	background-color: #6600a1;
 	border: none;
 	width: 3rem;
 	height: 3rem;
 }
 
-.arrowLeft{
+.btnArrowRight{
 	width: 2rem;
 	height: 2rem;
 	clip-path: polygon(44% 0, 51% 0, 100% 50%, 51% 100%, 44% 100%, 92% 50%);
@@ -112,6 +123,14 @@ input[type=checkbox] {
 
 #btnWeiterLabel{
 	margin-right: 2rem;
+}
+
+.glasses {
+	display: none;
+}
+
+.btnZuruckContainer{
+	display: none;
 }
 
 /*Produckt section style*/

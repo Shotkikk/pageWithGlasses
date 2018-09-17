@@ -7,20 +7,40 @@
 
 .specsList {
     list-style: none;
+    padding: 0px;
+    width: 18rem;
+
+}
+
+/*.specsList li:before{*/
+    /*content: "f00c";*/
+    /*display: inline-block;*/
+    /*color: #1CA638;*/
+    /*background-color: white;*/
+/*}*/
+
+.specsList li {
+    font-size: 0.8rem;
+    line-height: 1.4rem;
 }
 
 .priceDetail {
+    box-sizing: border-box;
     border: 1px solid gray;
     text-align: center;
+    border-radius: 5px;
+    width: 13rem;
 
 }
 
 .priceExtras {
-    font-size: 1rem;
+    font-size: 0.7rem;
+    margin: 0 0.5rem;
+    padding-top: 0.5rem;
+    font-weight: bold;
 }
 
 .priceContainer {
-    border: 1px solid red;
     margin-top: 1rem;
     margin-right: 1rem;
     margin-left: 1rem;
@@ -29,13 +49,37 @@
 .btnBuy {
     margin-top: 1rem;
     width: 100%;
+    padding: 1rem 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: linear-gradient(to top, #236802, #287002, #2d7803, #328003, #378803);
 }
+
+.btnDescription {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.btnShoppingCartIcon {
+    color: white;
+    transform: scale(1.5);
+}
+
+.btnBuyArrowRight{
+    color: white;
+    transform: scale(1.5);
+}
+
+
 
 .price {
     font-size: 1.5rem;
     font-weight: 800;
     color: #6600a1;
-    margin: 1rem 0;
+    margin: 0.7rem 0;
 }
 
 .check{
