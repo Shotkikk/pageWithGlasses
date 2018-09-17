@@ -1,0 +1,45 @@
+.singleProduct {
+    margin-top: 1rem;
+    border: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+}
+
+.specsList {
+    list-style: none;
+}
+
+.priceDetail {
+    border: 1px solid gray;
+    text-align: center;
+
+}
+
+.priceExtras {
+    font-size: 1rem;
+}
+
+.priceContainer {
+    border: 1px solid red;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.btnBuy {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #6600a1;
+    margin: 1rem 0;
+}
+
+.check{
+    text-align: right;
+    background-color: #1CA638;
+    color: white;
+}

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -24,17 +25,16 @@
             <button class="middleButton">2</button>
             <button class="middleButton">3</button>
             <button class="middleButton">4</button>
-            <button class="middleButton">5</button>
-            <button class="lastButton">6</button>
+            <button class="lastButton">5</button>
         </div>
         <button class="hamburgerButton">|||</button>
-        <h4>Welche Anforferrungen stellen Sie an die Fassung</h4>
+        <h3 style="color: #6600a1">Welche Anforferrungen stellen Sie an die Fassung</h3>
     </section>
 
     <section class="sliderSection">
         <div class="slider">
             <div class="face">
-                <img src="https://i.dailymail.co.uk/i/pix/2011/07/13/article-2014412-0CFB641900000578-42_1024x615_large.jpg" width="250" height="150">
+                <img src="./assets/1.jpg">
                 <div class="checkboxContainer">
                     <input type="checkbox" id="checkFace1">
                     <label for="checkFace1">owal</label>
@@ -42,15 +42,15 @@
             </div>
 
             <div class="face">
-                <img src="https://i.dailymail.co.uk/i/pix/2011/07/13/article-2014412-0CFB641900000578-42_1024x615_large.jpg" width="250" height="150">
+                <img src="./assets/2.jpg">
                 <div class="checkboxContainer">
                     <input type="checkbox" id="checkFace2">
-                    <label for="checkFace2">owal</label>
+                    <label for="checkFace2" >owal</label>
                 </div>
             </div>
 
             <div class="face">
-                <img src="https://i.dailymail.co.uk/i/pix/2011/07/13/article-2014412-0CFB641900000578-42_1024x615_large.jpg" width="250" height="150">
+                <img src="./assets/3.jpg">
                 <div class="checkboxContainer">
                     <input type="checkbox" id="checkFace3">
                     <label for="checkFace3">owal</label>
@@ -58,7 +58,7 @@
             </div>
 
             <div class="face">
-                <img src="https://i.dailymail.co.uk/i/pix/2011/07/13/article-2014412-0CFB641900000578-42_1024x615_large.jpg" width="250" height="150">
+                <img src="./assets/4.jpg">
                 <div class="checkboxContainer">
                     <input type="checkbox" id="checkFace4">
                     <label for="checkFace4">owal</label>
@@ -66,14 +66,23 @@
             </div>
         </div>
         <div class="btnContainer">
-            <button id="btnZuruck">Zuruck</button>
+            <span id="btnWeiterLabel">WEITER</span>
+            <button class="btnWeiter">
+                <div class="arrowLeft"></div>
+            </button>
         </div>
+    </section>
+    <section class="productsSection">
+        <div class="productHeaderContainer">
+            <h3 class="productsHeader">Produkte, die Ihren Wunschen entsprechen</h3>
+        </div>
+        <div class="products">
 
-
-
+        </div>
     </section>
 
     <script src="script.js"></script>
+    <link rel="stylesheet" href="extraCss.css" type="text/css">
 </body>
 
 </html>

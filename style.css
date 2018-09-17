@@ -4,9 +4,11 @@
 }
 
 body {
-	width: 1200px;
+	width: 925px;
 	margin: 0 auto;
 }
+
+/*Header sections style*/
 
 .header {
 	height: 10rem;
@@ -18,37 +20,48 @@ body {
 	background-color: rgba(255,255,255,0.7);
 }
 
+/*Navigation section style*/
+
 .navbar{
 	text-align: center;
 }
 
-.buttons{
+.buttons {
 	display: flex;
 	justify-content: space-around;
 	height: 3rem;
+	margin-top: 1rem;
+}
+
+.buttons button {
+	border: none;
+	color: white;
 }
 
 .firstButton{
 	width: 100%;
 	clip-path: polygon(95% 0, 0 0, 0 100%, 95% 100%, 100% 50%);
-	background-color: green;
+	background-color: #9999cc;
 }
 
 .middleButton{
 	width: 100%;
 	clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%, 5% 50%);
-	background-color: brown;
+	background-color: #9999cc;
 }
+
 
 .lastButton{
 	width: 100%;
 	clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 5% 50%);
-	background-color: blue;
+	background-color: #6600a1;
 }
 
 .hamburgerButton{
 	display: none;
 }
+
+/*Slider section style*/
 
 .slider{
 	display: flex;
@@ -65,15 +78,60 @@ body {
 	justify-content: flex-start;
 	align-items: center;
 	padding: 1rem 0;
-	background-color: darkgrey;
+	background-color: #EDEDED;
 }
+
+input[type=checkbox] {
+	background-color: white;
+	color: #6600a1;
+	/* For mobile, it's typically better to position checkbox on top of clickable
+       area and turn opacity to 0 instead. */
+}
+
 
 .btnContainer{
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
+	margin-top: 2rem;
 }
 
+.btnWeiter{
+	background-color: #6600a1;
+	border: none;
+	width: 3rem;
+	height: 3rem;
+}
+
+.arrowLeft{
+	width: 2rem;
+	height: 2rem;
+	clip-path: polygon(44% 0, 51% 0, 100% 50%, 51% 100%, 44% 100%, 92% 50%);
+	background-color: white;
+}
+
+#btnWeiterLabel{
+	margin-right: 2rem;
+}
+
+/*Produckt section style*/
+
+.productsSection{
+	margin-top: 1rem;
+}
+
+.productHeaderContainer{
+	background-color: #6600a1;
+	padding: 0.05rem;
+
+}
+
+.productsHeader{
+	color: white;
+	background-color: #6600a1;
+	text-align: center;
+
+}
 
 
 @media only screen and (min-width: 768px) {
@@ -85,7 +143,23 @@ body {
 }
 
 @media only screen and (max-width: 480px) {
+
+	*{
+		font-size: 30px;
+	}
 	.slider{
 		flex-direction: column;
 	}
+
+	.face{
+		/*width: 100%;*/
+		/*margin-left: 2rem;*/
+		/*margin-right: 2rem;*/
+	}
+
+	img {
+		width: 20rem;
+	}
+
+
 }
