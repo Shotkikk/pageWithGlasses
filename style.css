@@ -10,14 +10,18 @@ body {
 
 /*Header sections style*/
 
-.header {
-	height: 10rem;
-	background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/03/52/18/3857934c5941db9.jpg");
+header {
+	position: relative;
 }
 
-.headerText{
-	margin-top: 1rem;
-	background-color: rgba(255,255,255,0.7);
+.changePageLayout {
+	position: absolute;
+	top: 0;
+	right: 0px;
+	background-color: #6600a1;
+	color: white;
+	border: none;
+	padding: 0.5rem 1rem;
 }
 
 /*Navigation section style*/
@@ -36,6 +40,7 @@ body {
 .buttons button {
 	border: none;
 	color: white;
+	font-size: 1.2rem;
 }
 
 .firstButton{
@@ -85,11 +90,50 @@ body {
 	color: #6600a1;
 }
 
-input[type=checkbox] {
-	background-color: white;
+.customCheckbox {
+	position: absolute;
+	opacity: 0;
+}
+.customCheckbox + span {
+	position: relative;
+	cursor: pointer;
+	padding: 0;
+}
+.customCheckbox + label:before {
+	content: "";
+	margin: 0 0.5rem;
+	display: inline-block;
+	vertical-align: text-top;
+	width: 1rem;
+	height: 1rem;
+	background: white;
+
+}
+.customCheckbox:hover + label:before {
+	background: white;
+}
+.customCheckbox:focus + label:before {
+	box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+}
+.customCheckbox:checked + label:before {
+	background: white;
+}
+
+.customCheckbox:checked + label:after {
+	content: "";
+	position: absolute;
+	left: 11px;
+	top: 8px;
+	background: #6600a1;
+	width: 2px;
+	height: 2px;
+	box-shadow: 2px 0 0 #6600a1, 4px 0 0 #6600a1, 4px -2px 0 #6600a1, 4px -4px 0 #6600a1, 4px -6px 0 #6600a1, 4px -8px 0 #6600a1;
+	transform: rotate(45deg);
+}
+
+.fa-info-circle {
 	color: #6600a1;
-	/* For mobile, it's typically better to position checkbox on top of clickable
-       area and turn opacity to 0 instead. */
+	margin-left: 0.5rem;
 }
 
 
@@ -105,6 +149,10 @@ input[type=checkbox] {
 	justify-content: flex-start;
 	align-items: center;
 	margin-top: 2rem;
+}
+#btnZuruckLabel{
+	display: none;
+	margin-left: 2rem;
 }
 
 .btnStyle {
@@ -125,8 +173,14 @@ input[type=checkbox] {
 	margin-right: 2rem;
 }
 
-.glasses {
+.glassesSlider {
 	display: none;
+}
+
+.glasses {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .btnZuruckContainer{
@@ -149,7 +203,6 @@ input[type=checkbox] {
 	color: white;
 	background-color: #6600a1;
 	text-align: center;
-
 }
 
 
@@ -158,7 +211,6 @@ input[type=checkbox] {
 }
 
 @media only screen and (min-width: 480px) and (max-width: 768px){
-
 }
 
 @media only screen and (max-width: 480px) {
@@ -166,15 +218,33 @@ input[type=checkbox] {
 	*{
 		font-size: 30px;
 	}
-	.slider{
+
+	.facesSlider{
 		flex-direction: column;
 	}
 
-	.face{
+	.facesSlider{
 		/*width: 100%;*/
 		/*margin-left: 2rem;*/
 		/*margin-right: 2rem;*/
 	}
+
+	.glasses {
+		flex-direction: column;
+	}
+
+	.singleProduct{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.priceContainer {
+		/*display: flex;*/
+		/*justify-content: center;*/
+		/*align-items: center;*/
+	}
+
 
 	img {
 		width: 20rem;

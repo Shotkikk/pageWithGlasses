@@ -1,0 +1,254 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Catamaran', sans-serif;
+}
+
+body {
+    width: 925px;
+    margin: 0 auto;
+}
+
+/*Header sections style*/
+
+header {
+    position: relative;
+}
+
+.changePageLayout {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+}
+
+/*Navigation section style*/
+
+.navbar{
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    height: 3rem;
+    margin-top: 1rem;
+}
+
+.buttons button {
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.firstButton{
+    width: 100%;
+    clip-path: polygon(95% 0, 0 0, 0 100%, 95% 100%, 100% 50%);
+    background-color: #9999cc;
+}
+
+.middleButton{
+    width: 100%;
+    clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%, 5% 50%);
+    background-color: #9999cc;
+}
+
+
+.lastButton{
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 5% 50%);
+    background-color: black;
+}
+
+.hamburgerButton{
+    display: none;
+}
+
+/*Slider section style*/
+
+.facesSlider{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.face{
+    text-align: center;
+}
+
+.checkboxContainer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem 0;
+    background-color: #EDEDED;
+}
+
+.checkbox input:checked {
+    color: black;
+}
+
+.customCheckbox {
+    position: absolute;
+    opacity: 0;
+}
+.customCheckbox + span {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+}
+.customCheckbox + label:before {
+    content: "";
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 1rem;
+    height: 1rem;
+    background: white;
+
+}
+.customCheckbox:hover + label:before {
+    background: white;
+}
+.customCheckbox:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+}
+.customCheckbox:checked + label:before {
+    background: white;
+}
+
+.customCheckbox:checked + label:after {
+    content: "";
+    position: absolute;
+    left: 11px;
+    top: 8px;
+    background: black;
+    width: 2px;
+    height: 2px;
+    box-shadow: 2px 0 0 #6600a1, 4px 0 0 #6600a1, 4px -2px 0 #6600a1, 4px -4px 0 #6600a1, 4px -6px 0 #6600a1, 4px -8px 0 #6600a1;
+    transform: rotate(45deg);
+}
+
+.fa-info-circle {
+    color: black;
+    margin-left: 0.5rem;
+}
+
+
+.btnContainer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.btnZuruckContainer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 2rem;
+}
+#btnZuruckLabel{
+    display: none;
+    margin-left: 2rem;
+}
+
+.btnStyle {
+    background-color: black;
+    border: none;
+    width: 3rem;
+    height: 3rem;
+}
+
+.btnArrowRight{
+    width: 2rem;
+    height: 2rem;
+    clip-path: polygon(44% 0, 51% 0, 100% 50%, 51% 100%, 44% 100%, 92% 50%);
+    background-color: white;
+}
+
+#btnWeiterLabel{
+    margin-right: 2rem;
+}
+
+.glassesSlider {
+    display: none;
+}
+
+.glasses {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btnZuruckContainer{
+    display: none;
+}
+
+/*Produckt section style*/
+
+.productsSection{
+    margin-top: 1rem;
+}
+
+.productHeaderContainer{
+    background-color: black;
+    padding: 0.05rem;
+
+}
+
+.productsHeader{
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px){
+}
+
+@media only screen and (max-width: 480px) {
+
+    *{
+        font-size: 30px;
+    }
+
+    .facesSlider{
+        flex-direction: column;
+    }
+
+    .facesSlider{
+        /*width: 100%;*/
+        /*margin-left: 2rem;*/
+        /*margin-right: 2rem;*/
+    }
+
+    .glasses {
+        flex-direction: column;
+    }
+
+    .singleProduct{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .priceContainer {
+        /*display: flex;*/
+        /*justify-content: center;*/
+        /*align-items: center;*/
+    }
+
+
+    img {
+        width: 20rem;
+    }
+
+
+}

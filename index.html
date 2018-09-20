@@ -9,15 +9,11 @@
 </head>
 <body>
     <header>
-        <div>
-            <div class="header">
-                <div class="headerText">
-                    <h4>BRILLENBERATER</h4>
-                    <span>in weningen Schritten zur perfekten Brille</span>
-                </div>
-            </div>
-
-        </div>
+        <img src="./assets/header.jpg">
+        <button class="changePageLayout">
+            <i class="fas fa-undo-alt"></i>
+            New page
+        </button>
     </header>
     <section class="navbar">
         <div class="buttons">
@@ -36,16 +32,17 @@
             <div class="face">
                 <img src="./assets/1.jpg">
                 <div class="checkboxContainer">
-                    <input type="checkbox" id="checkFace1">
-                    <label for="checkFace1">Oval</label>
+                    <input type="checkbox" id="checkFace1" class="customCheckbox">
+                    <label for="checkFace1">Ecking</label>
+                    <i class="fas fa-info-circle"></i>
                 </div>
             </div>
 
             <div class="face">
                 <img src="./assets/2.jpg">
                 <div class="checkboxContainer">
-                    <input type="checkbox" id="checkFace2">
-                    <label for="checkFace2" >Oval</label>
+                    <input type="checkbox" id="checkFace2" class="customCheckbox">
+                    <label for="checkFace2" >Rund</label>
                     <i class="fas fa-info-circle"></i>
                 </div>
             </div>
@@ -53,7 +50,7 @@
             <div class="face">
                 <img src="./assets/3.jpg">
                 <div class="checkboxContainer">
-                    <input type="checkbox" id="checkFace3" class="checkbox">
+                    <input type="checkbox" id="checkFace3" class="customCheckbox">
                     <label for="checkFace3">Oval</label>
                     <i class="fas fa-info-circle"></i>
                 </div>
@@ -62,55 +59,60 @@
             <div class="face">
                 <img src="./assets/4.jpg">
                 <div class="checkboxContainer">
-                    <input type="checkbox" id="checkFace4" class="checkbox">
-                    <label for="checkFace4">Oval</label>
+                    <input type="checkbox" id="checkFace4" class="customCheckbox">
+                    <label for="checkFace4">Herzformig</label>
                     <i class="fas fa-info-circle"></i>
                 </div>
             </div>
-        </div>
-        <div class="btnContainer">
-            <span id="btnWeiterLabel">WEITER</span>
-            <button class="btnWeiter btnStyle">
-                <div class="btnArrowRight"></div>
-            </button>
         </div>
 
         <div class="glassesSlider">
             <div class="glasses">
                 <div class="face">
-                    <img src="./assets/3.jpg">
+                    <img src="./assets/glass1.jpg">
                     <div class="checkboxContainer">
-                        <input type="checkbox" id="checkFace3" class="checkbox">
-                        <label for="checkFace3">Oval</label>
+                        <input type="checkbox" id="glass1" class="customCheckbox">
+                        <label for="glass1">
+                            Bruchsicher & rostfrei: <br>
+                            Metall-Fassungen
+                        </label>
                         <i class="fas fa-info-circle"></i>
                     </div>
                 </div>
                 <div class="face">
-                    <img src="./assets/3.jpg">
+                    <img src="./assets/glass2.jpg">
                     <div class="checkboxContainer">
-                        <input type="checkbox" id="checkFace3" class="checkbox">
-                        <label for="checkFace3">Oval</label>
+                        <input type="checkbox" id="glass2" class="customCheckbox">
+                        <label for="glass2">
+                            Farbenfroh & extravagant" <br>
+                            Kunststoff-Fassungen
+                        </label>
                         <i class="fas fa-info-circle"></i>
                     </div>
                 </div>
                 <div class="face">
-                    <img src="./assets/3.jpg">
+                    <img src="./assets/glass3.jpg">
                     <div class="checkboxContainer">
-                        <input type="checkbox" id="checkFace3" class="checkbox">
-                        <label for="checkFace3">Oval</label>
+                        <input type="checkbox" id="glass3" class="customCheckbox">
+                        <label for="glass3">
+                            Leicht & stabil: <br>
+                            Titan-Fassungen
+                        </label>
                         <i class="fas fa-info-circle"></i>
                     </div>
                 </div>
-            </div>
-            <div class="btnZuruckContainer">
-                <button class=" btnStyle">
-                    <div class="btnArrowLeft"></div>
-                </button>
-                <span id="btnZuruckLabel">ZURUCK</span>
             </div>
         </div>
 
+        <div class="btnContainer">
+            <span id="btnWeiterLabel">WEITER</span>
+            <button class="btnWeiter btnStyle">
+                <div class="btnArrowRight" aria-disabled="true"></div>
+            </button>
+            <span id="btnZuruckLabel">ZURUCK</span>
+        </div>
     </section>
+
     <section class="productsSection">
         <div class="productHeaderContainer">
             <h3 class="productsHeader">Produkte, die Ihren Wunschen entsprechen</h3>
@@ -119,7 +121,6 @@
 
         </div>
     </section>
-
     <script src="script.js"></script>
     <link rel="stylesheet" href="extraCss.css" type="text/css">
 
