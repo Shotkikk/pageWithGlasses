@@ -4,7 +4,6 @@ function pageGallery() {
 
     btnWeiter.addEventListener('click', function(e){
         changeGallery = !changeGallery;
-        console.log(e);
         if(changeGallery === true) {
             e.target.parentElement.style = 'justify-content: flex-end;';
             e.target.parentElement.parentElement.children[0].style = 'display: flex';
@@ -15,13 +14,11 @@ function pageGallery() {
             e.target.parentElement.children[2].style = 'display: none';
         }
         else {
-            console.log(e.target.parentElement.parentElement.children, 'weiter');
             e.target.parentElement.style = 'justify-content: flex-start;';
             e.target.parentElement.parentElement.children[0].style = 'display: none';
             e.target.parentElement.parentElement.children[1].style = 'display: block';
             e.target.style = 'background-color: #EDEDED';
             e.target.children[0].style = 'clip-path: polygon(100% 0, 48% 50%, 100% 100%, 92% 100%, 41% 50%, 92% 0)';
-            console.log(e.target.parentElement.children[2], );
             e.target.parentElement.children[0].style = 'display: none';
             e.target.parentElement.children[2].style = 'display: block';
 
@@ -50,7 +47,7 @@ function changePage() {
     })
 }
 
-function addProducts(howManyProducts, howManyLi){
+function addProducts(howManyProducts){
     var productsContainer = document.querySelector('.products');
     var productsDetail = [
         'Braillentyp: Damen, Herren', 'Rahmentyp: Randlose Brille', 'Eckiger Rahmen', 'Ovaler Rahmen', "Runder Rahmen", 'Still: casual, extravagant', 'Einstarkenbrille','Material: Metal'
@@ -97,15 +94,13 @@ function addProducts(howManyProducts, howManyLi){
         btnArrowRightIcon.classList = 'fas fa-arrow-alt-circle-right btnBuyArrowRight';
 
 
-        for(var j = 0; j <= howManyLi - 1 ; j++){
+        for(var j = 0; j <= productsDetail.length - 1 ; j++){
 			var checkContainer = document.createElement('span');
             var newLi = document.createElement('li');
             var check = document.createElement('i');
 
             checkContainer.classList = 'fa-li';
-            // liStatus[j] == 1 ? console.log(liStatus[j]) :  console.log(liStatus[j]);
             liStatus[j] == 1 ?  check.classList = 'fas fa-check check' :  check.classList = 'fas fa-circle dot';
-            // check.classList = 'fas fa-check check';
 
             checkContainer.appendChild(check);
 
@@ -139,7 +134,7 @@ function addProducts(howManyProducts, howManyLi){
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    addProducts(2,8);
+    addProducts(2);
     pageGallery();
     changePage();
 });
